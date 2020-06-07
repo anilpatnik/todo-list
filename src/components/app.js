@@ -1,16 +1,24 @@
-import React from "react";
-import NavbarComponent from "./navbar.component";
-import BookListComponent from "./book-list.component";
-import BookFormComponent from "./book-form.component";
+import React, { Fragment } from "react";
+import { AppBar, Toolbar, Typography, Container, Box } from "@material-ui/core";
+import { HearderComponent } from "./header.component";
+import { ItemListComponent } from "./item-list.component";
+import { ItemFormComponent } from "./item-form.component";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <NavbarComponent></NavbarComponent>
-      <BookListComponent></BookListComponent>
-      <BookFormComponent></BookFormComponent>
-    </div>
+    <Fragment>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6">Todo List</Typography>
+        </Toolbar>
+      </AppBar>
+      <Box mt={5}>
+        <Container maxWidth="md">
+          <HearderComponent />
+          <ItemListComponent />
+          <ItemFormComponent />
+        </Container>
+      </Box>
+    </Fragment>
   );
 }
-
-export default App;

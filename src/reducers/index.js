@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import { bookReducer } from "./book.reducer";
+import { itemReducer } from "./item.reducer";
 
 const appReducer = combineReducers({
-  books: bookReducer
+  items: itemReducer
 });
 
 const rootReducer = (state, action) => {
